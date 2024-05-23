@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@bollwyvl](https://github.com/bollwyvl/)
+* [@conda-forge/jupyterlite-core](https://github.com/conda-forge/jupyterlite-core/)
 
