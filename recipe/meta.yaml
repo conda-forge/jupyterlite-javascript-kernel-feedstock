@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyterlite-javascript-kernel/jupyterlite_javascript_kernel-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/j/jupyterlite-javascript-kernel/jupyterlite_javascript_kernel-{{ version }}.tar.gz
   sha256: 39870efb4cdfe669b99552b4ad21a82f575691e4fdaf77b33bef04ec230889ff
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -20,9 +20,9 @@ requirements:
     - hatchling >=1.5.0
     - jupyterlab >=4.1.1,<4.2
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -33,6 +33,7 @@ test:
 
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jupyterlite/javascript-kernel
