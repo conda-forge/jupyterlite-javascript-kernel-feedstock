@@ -3,11 +3,15 @@ About jupyterlite-javascript-kernel-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlite-javascript-kernel-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jupyterlite/javascript-kernel
+Home: https://pypi.org/project/jupyterlite-javascript-kernel
 
 Package license: BSD-3-Clause
 
 Summary: A JavaScript kernel for JupyterLite
+
+Development: https://github.com/jupyterlite/javascript-kernel
+
+Documentation: https://jupyterlite-javascript-kernel.readthedocs.io/
 
 Current build status
 ====================
@@ -32,14 +36,14 @@ Current release info
 Installing jupyterlite-javascript-kernel
 ========================================
 
-Installing `jupyterlite-javascript-kernel` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `jupyterlite-javascript-kernel` from the `conda-forge/label/jupyterlite_javascript_kernel_alpha` channel can be achieved by adding `conda-forge/label/jupyterlite_javascript_kernel_alpha` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/jupyterlite_javascript_kernel_alpha
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyterlite-javascript-kernel` can be installed with `conda`:
+Once the `conda-forge/label/jupyterlite_javascript_kernel_alpha` channel has been enabled, `jupyterlite-javascript-kernel` can be installed with `conda`:
 
 ```
 conda install jupyterlite-javascript-kernel
@@ -54,26 +58,26 @@ mamba install jupyterlite-javascript-kernel
 It is possible to list all of the versions of `jupyterlite-javascript-kernel` available on your platform with `conda`:
 
 ```
-conda search jupyterlite-javascript-kernel --channel conda-forge
+conda search jupyterlite-javascript-kernel --channel conda-forge/label/jupyterlite_javascript_kernel_alpha
 ```
 
 or with `mamba`:
 
 ```
-mamba search jupyterlite-javascript-kernel --channel conda-forge
+mamba search jupyterlite-javascript-kernel --channel conda-forge/label/jupyterlite_javascript_kernel_alpha
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search jupyterlite-javascript-kernel --channel conda-forge
+mamba repoquery search jupyterlite-javascript-kernel --channel conda-forge/label/jupyterlite_javascript_kernel_alpha
 
 # List packages depending on `jupyterlite-javascript-kernel`:
-mamba repoquery whoneeds jupyterlite-javascript-kernel --channel conda-forge
+mamba repoquery whoneeds jupyterlite-javascript-kernel --channel conda-forge/label/jupyterlite_javascript_kernel_alpha
 
 # List dependencies of `jupyterlite-javascript-kernel`:
-mamba repoquery depends jupyterlite-javascript-kernel --channel conda-forge
+mamba repoquery depends jupyterlite-javascript-kernel --channel conda-forge/label/jupyterlite_javascript_kernel_alpha
 ```
 
 
@@ -98,12 +102,12 @@ it is possible to build and upload installable packages to the
 [conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
-To manage the continuous integration and simplify feedstock maintenance
+To manage the continuous integration and simplify feedstock maintenance,
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
-For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
+For more information, please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
@@ -130,7 +134,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `conda-forge` channel.
 Note that all branches in the conda-forge/jupyterlite-javascript-kernel-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
