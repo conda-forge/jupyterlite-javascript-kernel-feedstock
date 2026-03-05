@@ -57,7 +57,7 @@ tests:
         - jupyterlite-core-with-lab
         - jupyterlab
     script:
-      - python -c "print(__import__('jupyterlite_javascript_kernel').__version__))" | ${{ grep }} "${{ version | replace('.', '\\.') }}"
+      - python -c "print(__import__('jupyterlite_javascript_kernel').__version__)" | ${{ grep }} "^${{ version | replace('.', '\\.') }}$"
       - jupyter labextension list 2>&1 | ${{ grep }} "${{ js_name }}.*${{ js_version | replace('.', '\\.') }}.*OK"
       - jupyter lite build
       - ${{ ls }} "_output/extensions/${{ js_name }}/package.json"
