@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.4.0a1"
+  version: "0.4.0a4"
   python_check_max: "3.14"
   jupyterlab_min: "4.5.5"
   jupyterlab_max: "4.6"
@@ -22,7 +22,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-javascript-kernel/jupyterlite_javascript_kernel-${{ version }}.tar.gz
-  sha256: d3abe9d30a7207a1a8e971773b4964e1e29c789c4f7c59d499d0684e6195e12c
+  sha256: f46f259c9f7918e4b21b8734e6680075a6f8bf34bc3de10e65d43e09875dfa39
 
 build:
   number: 0
