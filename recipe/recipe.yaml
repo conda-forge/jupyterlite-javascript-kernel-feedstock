@@ -2,12 +2,12 @@
 schema_version: 1
 
 context:
-  version: "0.4.0a4"
+  version: "0.4.0a5"
   python_check_max: "3.14"
-  jupyterlab_min: "4.5.5"
-  jupyterlab_max: "4.6"
-  jupyterlite_core_min: "0.7.0"
-  jupyterlite_core_max: "0.8.0"
+  jupyterlab_min: "4.6.0"
+  jupyterlab_max: "4.7"
+  jupyterlite_core_min: "0.8.0"
+  jupyterlite_core_max: "0.9.0"
   js_name: "@jupyterlite/javascript-kernel-extension"
   # derived
   js_version: ${{ version | replace("a", "-alpha.") | replace("b", "-beta.") | replace("rc", "-rc.") }}
@@ -22,7 +22,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlite-javascript-kernel/jupyterlite_javascript_kernel-${{ version }}.tar.gz
-  sha256: f46f259c9f7918e4b21b8734e6680075a6f8bf34bc3de10e65d43e09875dfa39
+  sha256: 8a0907d73616a17bc88940c0b2c413647c44d88fee184d20c66ed3dea45dca0b
 
 build:
   number: 0
